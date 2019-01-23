@@ -66,3 +66,8 @@ void TestSList();
 
 // 链表没有SList结构，只有Node结构
 void SListPushBackII(Node** pHead, SDataType data);
+
+void SListPushFrontII(Node** pHead, SDataType data);
+
+// 带头节点
+void SListPushFrontIII(Node* pHead, SDataType data);

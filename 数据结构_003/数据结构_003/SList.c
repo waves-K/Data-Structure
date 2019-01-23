@@ -339,7 +339,7 @@ void SListPushBackII(Node** pHead, SDataType data) {
 		*pHead = pNewNode;
 	}
 	else {
-		Node* pCur = pHead;
+		Node* pCur = *pHead;
 		while (pCur->_pNext) {
 			pCur = pCur->_pNext;
 		}
@@ -350,13 +350,55 @@ void SListPushBackII(Node** pHead, SDataType data) {
 void TestSList4() {
 	Node* pHead = NULL;
 	SListPushBackII(&pHead, 1);
-	PrintSList(&pHead);
+//	PrintSList(&pHead);
 
-	SListDestroy(&pHead);
+	//SListDestroy(&pHead);
 }
+
+
+// 不带头节点
+// 一级指针--->操作有误
+void SListPushFrontII(Node** pHead, SDataType data) {
+	printf("%p\n", &pHead);		// 打印形参的地址
+	Node* pNewNode = BuySListNode(data);
+	pNewNode->_pNext = *pHead;
+	*pHead = pNewNode;	// 修改指针本身的内容
+}
+
+void TestSList5() {
+	Node* pH = NULL;	// 打印实参的地址
+	printf("%p", &pH);
+	SListPushFrontII(&pH, 1);
+	SListPushFrontII(&pH, 2);
+
+	//PrintSList(&pH);
+
+	//SListDestroy(&pH);
+}
+
+
+// 带头节点
+
+void SListPushFrontIII(Node* pHead, SDataType data) {
+	printf("%p\n", &pHead);		// 打印形参的地址
+	Node* pNewNode = BuySListNode(data);
+	pNewNode->_pNext = pHead->_pNext;
+	pHead->_pNext = pNewNode;	// 没有改变指针本身的内容，而是改变指针指向空间的内容
+}
+
+void testSList6() {
+	Node nodeHead;
+	nodeHead._pNext = NULL; // 因为链表中一个节点都没有，所以要让头结点的Nest域指向空
+
+	SListPushFrontIII(&nodeHead, 1);
+	SListPushFrontIII(&nodeHead, 2);
+}
+
 void TestSList() {
 	//TestSList1();
 	//TestSList2();
 	//TestSList3();
-	TestSList4();
+	//TestSList4();
+	//TestSList5();
+	testSList6();
 }

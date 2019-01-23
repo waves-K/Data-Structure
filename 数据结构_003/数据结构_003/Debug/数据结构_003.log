@@ -1,7 +1,4 @@
 ﻿  SList.c
-e:\文件\vs-项目数据\项目\visual c++ 项目\data-structure\数据结构_003\数据结构_003\slist.c(342): warning C4047: “初始化”:“Node *”与“Node **”的间接级别不同
-e:\文件\vs-项目数据\项目\visual c++ 项目\data-structure\数据结构_003\数据结构_003\slist.c(353): warning C4047: “函数”:“SList *”与“Node **”的间接级别不同
-e:\文件\vs-项目数据\项目\visual c++ 项目\data-structure\数据结构_003\数据结构_003\slist.c(353): warning C4024: “PrintSList”: 形参和实参 1 的类型不同
-e:\文件\vs-项目数据\项目\visual c++ 项目\data-structure\数据结构_003\数据结构_003\slist.c(355): warning C4047: “函数”:“SList *”与“Node **”的间接级别不同
-e:\文件\vs-项目数据\项目\visual c++ 项目\data-structure\数据结构_003\数据结构_003\slist.c(355): warning C4024: “SListDestroy”: 形参和实参 1 的类型不同
+  test.c
+  正在生成代码...
   数据结构_003.vcxproj -> E:\文件\vs-项目数据\项目\Visual C++ 项目\Data-Structure\数据结构_003\Debug\数据结构_003.exe
