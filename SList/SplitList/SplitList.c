@@ -46,17 +46,18 @@ ListNode* partition(ListNode* pHead, int x){
 
     // 合并分割后的链表
     // 这里需要注意的是小链表为空的情况
-    if(small == NULL){
-        return big;
+    if(smallLast != NULL){
+        smallList->next = big;
     }
-    if(big == NULL){
+    if(bigLast != NULL){
+        bigLast->next = NULL;
+    }
+    if(small != NULL){
         return small;
     }
-    if(small != NULL && big != NULL){
-        smallLast->next = big;
+    else{
+        return big;
     }
-    return small;
-}
 
 
 int main(){
