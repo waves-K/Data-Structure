@@ -25,5 +25,6 @@ int BSTreeInsert(BSTreeNode** root, DataType key);
 int BSTreeInsert2(BSTreeNode** root, DataType key);
 
 // 删除
-int BSTreeNodeRemove(BSTreeNode** root, DataType data);
+int BSTreeNodeRemove(BSTreeNode** root, DataType key);
 
+void BSTreeTest();
