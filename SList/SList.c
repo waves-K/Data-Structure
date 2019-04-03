@@ -196,7 +196,7 @@ void SListPrint(SList *slist){
 
     Node* current = slist->first;
     while(current != NULL){
-        printf("%d ",current);
+        printf("%d ",current->value);
         current = current->next;
     }
     printf("\n");
